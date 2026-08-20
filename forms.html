@@ -3,25 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Registration Form</title>
+
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 400px;
+            max-width: 90%;
+            margin: 0 auto;
+            border-radius: 8px;
+            background-color: rgb(245, 234, 234);
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="radio"] + label,
+        input[type="checkbox"] + label {
+            display: inline;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 100%;
+            height: 220px;
+            border: none;
+            margin-top: 15px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto 0;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4806ab;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Student Registration form</h1>
+
+    <h1>Student Registration Form</h1>
+
     <form action="/register" method="POST">
-        <label for="name">Full name:</label>
-        <input type="text" id="Full name" name ="full name" placeholder="enter name">
-        <br>    
-        <label for="Email">Email:</label>
-        <input type="email" id="email" name ="Email" placeholder="enter email" required>
-        <br>    
+
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="fullName" placeholder="Enter name" required>
+
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+
+        <br><br>
+
         <label for="age">Age:</label>
-        <input type="number" id="number",name ="Age" placeholder="enter age ">
-        <br>
+        <input type="number" id="age" name="age" placeholder="Enter age" required>
+
+        <br><br>
+
         <label for="dateofbirth">DOB:</label>
-        <input type="date" id="dateofbirth" name ="DOB" >
-        <br>
-        
-        <label for="gender">Gender:</label>
+        <input type="date" id="dateofbirth" name="dob">
+
+        <br><br>
+
+        <label>Gender:</label>
 
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label>
@@ -31,19 +119,29 @@
 
         <input type="radio" id="other" name="gender" value="other">
         <label for="other">Other</label>
-        <br>
-        <label>Skills:</label>  
-        <br>
+
+        <br><br>
+
+        <label>Skills:</label>
+
         <input type="checkbox" id="html" name="skills" value="HTML">
         <label for="html">HTML</label>
-        <input type="checkbox" id="javascript" name="skills" value="javascript">
-        <label for="javascript">Javascript</label>
-        <br>
+
+        <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+        <label for="javascript">JavaScript</label>
+
+        <br><br>
+
+        <iframe
+            src="https://www.youtube.com/embed/nYYqfyLZ3Ck"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+        </iframe>
+
         <button type="submit">Submit</button>
 
+    </form>
 
-        
-    </form> 
 </body>
 </html>
-   
