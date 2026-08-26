@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DevConnect - Community Feed</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f2f5;
+            color: #111827;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            height: 70px;
+            background-color: #111827;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 28px;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        .user {
+            color: #9ca3af;
+            font-size: 12px;
+        }
+
+        .feed {
+            width: 335px;
+            margin: 45px auto;
+            padding-bottom: 100px;
+        }
+
+        .post {
+            position: relative;
+            background-color: white;
+            width: 100%;
+            padding: 20px;
+            margin-bottom: 34px;
+            border-radius: 7px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-header {
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .username {
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .handle {
+            color: #9ca3af;
+            margin-left: 4px;
+        }
+
+        .time {
+            color: #9ca3af;
+            margin-left: 4px;
+        }
+
+        .tag {
+            position: absolute;
+            top: -10px;
+            right: 12px;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: bold;
+            background-color: #e0e7ff;
+            color: #4f46e5;
+        }
+
+        .tag.trending {
+            background-color: #fee2e2;
+            color: #dc2626;
+        }
+
+        .post p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #374151;
+        }
+
+        .new-post {
+            position: fixed;
+            right: 30px;
+            bottom: 25px;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 25px;
+            background-color: #2563eb;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .new-post:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            DevConnect
+        </div>
+
+        <div class="user">
+            @yash_dev
+        </div>
+
+    </nav>
+
+    <main class="feed">
+
+        <div class="post">
+
+            <div class="post-header">
+                <span class="username">Alex Rivera</span>
+                <span class="handle">@alex_tech</span>
+                <span class="time">· 2h ago</span>
+            </div>
+
+            <span class="tag">
+                Verified Author
+            </span>
+
+            <p>
+                Just deployed our Node.js microservice to production.
+                Latency dropped by 40% using Redis caching! 🚀
+            </p>
+
+        </div>
+
+        <div class="post">
+
+            <div class="post-header">
+                <span class="username">Tech Careers India</span>
+                <span class="handle">@tech_jobs</span>
+                <span class="time">· 5h ago</span>
+            </div>
+
+            <span class="tag trending">
+                Trending
+            </span>
+
+            <p>
+                Top skills hiring managers are looking for in 2026:
+                System Design, AI integration, and core CSS layout mastery.
+            </p>
+
+        </div>
+
+        <div class="post">
+
+            <div class="post-header">
+                <span class="username">Frontend Daily</span>
+                <span class="handle">@frontend_tips</span>
+                <span class="time">· 1d ago</span>
+            </div>
+
+            <p>
+                Remember: position: absolute looks for the nearest
+                parent with position: relative. If it doesn't find one,
+                it anchors to the viewport!
+            </p>
+
+        </div>
+
+    </main>
+
+    <button class="new-post">
+        New Post
+    </button>
+
+</body>
+
+</html>
